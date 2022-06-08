@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+div {
+    display: flex;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #E5E5E5;
+    position: relative;
+}
+
+main {
+    padding-top: 100px;
+}
+
+h1 {
+    font-family: 'Righteous', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    margin: 10px 15px;
+}
+
+header {
+    display: flex;
+    background-color: #CF2B2B;
+    color: #FFFFFF;
+    height: 90px;
+    align-items: center;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+footer {
+    display: flex;
+    background-color: #CF2B2B;
+    color: #FFFFFF;
+    height: 90px;
+    align-items: center;
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.barrasuperior {
+    flex-direction: column;
+}
+
+header h1 {
+    font-size: 44px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+header p {
+    font-size: 18px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.carousel {
+    overflow-x: scroll;
+    height: 240px;
+    margin-left: 15px;
+}
+
+.carousel img {
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.carousel h1 {
+    font-weight: 700;
+    font-size: 16px;
+    color: #333333;
+}
+
+.carousel p {
+    font-weight: 300;
+    font-size: 15px;
+    color: #A6A6A6;
+}
+
+.carousel .preco {
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+}
+
+.escolha {
+    justify-content: space-between;
+    flex-direction: column;
+    min-width: 170px;
+    max-width: 170px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+}
+
+.escolha * {
+    margin: auto 15px;
+}
+
+.escolha img {
+    margin-top: 20px;
+}
+
+.escolha .preco {
+    margin-bottom: 15px;
+}
