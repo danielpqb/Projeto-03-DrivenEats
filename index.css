@@ -16,6 +16,7 @@ body {
 
 main {
     padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 h1 {
@@ -28,11 +29,11 @@ h1 {
 
 header {
     display: flex;
+    position: fixed;
     background-color: #CF2B2B;
     color: #FFFFFF;
     height: 90px;
     align-items: center;
-    position: absolute;
     margin: auto;
     top: 0;
     left: 0;
@@ -41,15 +42,34 @@ header {
 
 footer {
     display: flex;
-    background-color: #CF2B2B;
-    color: #FFFFFF;
+    position: fixed;
+    background-color: #FFFFFF;
     height: 90px;
+    justify-content: center;
     align-items: center;
-    position: absolute;
+    
     margin: auto;
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+.barrainferior {
+    width: 80%;
+    height: 80%;
+    background-color: #CBCBCB;
+    border-radius: 50px;
+}
+
+.barrainferior div {
+    color: #FFFFFF;
+    border-radius: 50px;
+    display: flex;
+    margin: auto;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    max-width: 200px;
 }
 
 .barrasuperior {
