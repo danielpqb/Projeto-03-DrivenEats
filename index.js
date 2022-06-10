@@ -42,13 +42,13 @@ function select() {
 }
 
 function sendMsg() {
-    let msg = `Olá, gostaria de fazer o pedido:
-    - Prato: Frango Yin Yang
-    - Bebida: Coquinha Gelada
-    - Sobremesa: Pudim
-    Total: R$ 27.70`
+    let msg = 'Olá, gostaria de fazer o pedido:\n' +
+        '- Prato: Frango Yin Yang\n' +
+        '- Bebida: Coquinha Gelada\n' +
+        '- Sobremesa: Pudim\n' +
+        'Total: R$ ' + preco
 
     msg = encodeURIComponent(msg)
-    
-    window.location.href = 'https://wa.me/5521994149949?text=' + "oi"
+
+    window.location.href = 'https://wa.me/5521994149949?text=' + msg
 }
