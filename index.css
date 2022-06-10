@@ -141,6 +141,12 @@ header p {
     margin-bottom: 15px;
 }
 
-.escolha{
-    
+.select1,
+.select2,
+.select3 {
+    border: 5px solid #32B72F;
+}
+
+.hide {
+    display: none;
 }
