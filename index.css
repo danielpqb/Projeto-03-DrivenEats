@@ -147,6 +147,10 @@ header p {
     border: 5px solid #32B72F;
 }
 
+.finish {
+    background-color: #32B72F;
+}
+
 .hide {
     display: none;
 }

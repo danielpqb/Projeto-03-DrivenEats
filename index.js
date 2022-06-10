@@ -29,4 +29,26 @@ function select() {
                 break;
         }
     }
+
+    if ((document.querySelector('.select1') != null) &&
+        (document.querySelector('.select2') != null) &&
+        (document.querySelector('.select3') != null)) {
+        let bi = document.querySelector('.barrainferior')
+        bi.classList.add('finish')
+        bi.onclick = sendMsg
+        bi.querySelector('div').innerHTML = 'Fechar pedido'
+    }
+
+}
+
+function sendMsg() {
+    let msg = `Olá, gostaria de fazer o pedido:
+    - Prato: Frango Yin Yang
+    - Bebida: Coquinha Gelada
+    - Sobremesa: Pudim
+    Total: R$ 27.70`
+
+    msg = encodeURIComponent(msg)
+    
+    window.location.href = 'https://wa.me/5521994149949?text=' + "oi"
 }
