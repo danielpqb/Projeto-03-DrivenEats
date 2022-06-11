@@ -39,21 +39,43 @@ function select() {
         (document.querySelector('.select3') != null)) {
         let bi = document.querySelector('.barrainferior')
         bi.classList.add('finish')
-        bi.onclick = sendMsg
+        bi.onclick = confirmOrder
         bi.querySelector('div').innerHTML = 'Fechar pedido'
     }
 }
 
-function sendMsg() {
+function confirmOrder() {
     order.finalPrice = order.plateInfo[0] + order.drinkInfo[0] + order.desertInfo[0]
-    
+
+    document.querySelector('.confirmar').classList.remove('hide')
+    document.querySelector('header').classList.add('blur')
+    document.querySelector('main').classList.add('blur')
+    document.querySelector('footer').classList.add('blur')
+
+    document.querySelector('.p1').innerHTML = order.plateInfo[0].toFixed(2).replace('.', ',')
+    document.querySelector('.p2').innerHTML = order.drinkInfo[0].toFixed(2).replace('.', ',')
+    document.querySelector('.p3').innerHTML = order.desertInfo[0].toFixed(2).replace('.', ',')
+    document.querySelector('.ptotal').innerHTML = order.finalPrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+
+    document.querySelector('.msg').onclick = sendMsg
+    document.querySelector('.cancelar').onclick = cancel
+}
+
+function sendMsg() {
     let msg = 'Olá, gostaria de fazer o pedido:\n' +
         '- Prato: ' + order.plateInfo[1] + '\n' +
         '- Bebida: ' + order.drinkInfo[1] + '\n' +
         '- Sobremesa: ' + order.desertInfo[1] + '\n' +
-        'Total: R$ ' + order.finalPrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        'Total: ' + order.finalPrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
     window.location.href = 'https://wa.me/5521994149949?text=' + encodeURIComponent(msg)
+}
+
+function cancel(){
+    document.querySelector('.confirmar').classList.add('hide')
+    document.querySelector('header').classList.remove('blur')
+    document.querySelector('main').classList.remove('blur')
+    document.querySelector('footer').classList.remove('blur')
 }
 
 let order = new Order()
@@ -64,4 +86,3 @@ window.onload = () => { //Iterate choices
         choices[i].onclick = select
     }
 }
-
