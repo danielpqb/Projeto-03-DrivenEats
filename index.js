@@ -53,11 +53,7 @@ function sendMsg() {
         '- Sobremesa: ' + order.desertInfo[1] + '\n' +
         'Total: R$ ' + order.finalPrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
-    console.log(msg)
-
-    //msg = encodeURIComponent(msg)
-
-    //window.location.href = 'https://wa.me/5521994149949?text=' + msg
+    window.location.href = 'https://wa.me/5521994149949?text=' + encodeURIComponent(msg)
 }
 
 let order = new Order()
